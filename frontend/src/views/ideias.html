@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+<!-- 
+  <title>Ideias</title> 
+  <body id="pageIdeas">
+-->
+{% set bodyId = "pageIdeas" %} {%block content%}
+<header>
+  <a href="/home">
+    <img src="img/logo.png" alt="logo" />
+  </a>
+  <nav>
+    <li>
+      <a href="/home">Ínicio</a>
+    </li>
+    <li>
+      <a href="#" onclick="onOff()" class="button">Nova Ideia</a>
+    </li>
+  </nav>
+</header>
+<section id="title">
+  <p>em exibição</p>
+  <h1>Ideias</h1>
+</section>
+<main>
+  <section id="ideas">
+    {% include "all_Ideas.html" %}
+  </section>
+</main>
+<footer id="footer">
+  Com
+  <i class="fas fa-heart">
+    <a href="https://www.instagram.com/marcelo.de.castro369/" target="_blank">
+      Marcelo de Casro
+    </a>
+  </i>
+</footer>
+
+{%endblock%}

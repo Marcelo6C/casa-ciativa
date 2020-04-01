@@ -1,0 +1,22 @@
+{% for idea in ideas%}
+<div class="idea">
+  <img src="{{idea.image}}" alt="{{idea.title}}" />
+  <div class="content">
+    <div class="cabeca">
+      <h3>{{idea.title}}</h3>
+      <form action="/ideias" method="GET">
+        <button class="trash">
+          <i class="fas fa-trash"></i>
+        </button>
+      </form>
+    </div>
+
+    <p>{{idea.category}}</p>
+    <div class="description">
+      {{idea.description}}
+    </div>
+    <a href="{{idea.link}}">Ir para a ideia</a>
+  </div>
+</div>
+
+{% endfor %}
